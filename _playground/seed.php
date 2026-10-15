@@ -134,5 +134,8 @@ update_option( 'page_on_front', $home );
 update_option( 'page_for_posts', $notes );
 update_option( 'blogname', 'Fieldnote' );
 update_option( 'blogdescription', 'A small studio for thoughtful websites.' );
-update_option( 'permalink_structure', '/%postname%/' );
+// Pretty permalinks. Set them through WP_Rewrite, not update_option(): in
+// Playground the routing rules already exist by now, and only this updates
+// WordPress's in-memory copy so the flush rebuilds them correctly.
+$GLOBALS['wp_rewrite']->set_permalink_structure( '/%postname%/' );
 flush_rewrite_rules();
