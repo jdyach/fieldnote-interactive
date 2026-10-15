@@ -1,0 +1,62 @@
+.wp-block-fieldnote-interactive-save-button {
+
+	&__button {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.45em;
+		padding: 0.45em 0.9em;
+		border: 1px solid currentcolor;
+		border-radius: 999px;
+		background: transparent;
+		color: inherit;
+		font: inherit;
+		font-size: var(--wp--preset--font-size--small, 0.875rem);
+		font-weight: 600;
+		line-height: 1.2;
+		cursor: pointer;
+		transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
+
+		svg {
+			width: 1.1em;
+			height: 1.1em;
+			flex: none;
+		}
+
+		.fi-icon-fill {
+			fill: transparent;
+			transition: fill 150ms ease;
+		}
+
+		&:hover {
+			border-color: var(--wp--preset--color--accent, #a8451f);
+			color: var(--wp--preset--color--accent, #a8451f);
+		}
+
+		&:focus-visible {
+			outline: 2px solid var(--wp--preset--color--accent, #a8451f);
+			outline-offset: 2px;
+		}
+
+		&[aria-pressed="true"] {
+			border-color: var(--wp--preset--color--accent, #a8451f);
+			background: var(--wp--preset--color--accent, #a8451f);
+			color: var(--wp--preset--color--base, #fff);
+
+			.fi-icon-fill {
+				fill: currentcolor;
+			}
+		}
+
+		&[hidden] {
+			display: none;
+		}
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+	.wp-block-fieldnote-interactive-save-button__button,
+	.wp-block-fieldnote-interactive-save-button__button .fi-icon-fill {
+		transition: none;
+	}
+}

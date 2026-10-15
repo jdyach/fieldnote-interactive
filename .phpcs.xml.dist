@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<ruleset name="Fieldnote Interactive">
+	<description>WordPress Coding Standards for the Fieldnote Interactive plugin.</description>
+
+	<file>.</file>
+	<exclude-pattern>/build/*</exclude-pattern>
+	<exclude-pattern>/node_modules/*</exclude-pattern>
+	<exclude-pattern>/vendor/*</exclude-pattern>
+
+	<arg name="extensions" value="php"/>
+	<arg name="colors"/>
+	<arg value="sp"/>
+
+	<config name="testVersion" value="7.4-"/>
+	<config name="minimum_wp_version" value="6.8"/>
+
+	<rule ref="WordPress">
+		<!-- Templates mix markup and PHP; core block render files do the same. -->
+		<exclude name="Squiz.PHP.EmbeddedPhp"/>
+		<exclude name="Generic.WhiteSpace.ScopeIndent"/>
+		<!-- render.php file names are dictated by block.json. -->
+		<exclude name="WordPress.Files.FileName"/>
+	</rule>
+
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array">
+				<element value="fieldnote-interactive"/>
+			</property>
+		</properties>
+	</rule>
+
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+		<properties>
+			<property name="prefixes" type="array">
+				<element value="fieldnote_interactive"/>
+				<element value="fieldnote"/>
+			</property>
+		</properties>
+	</rule>
+</ruleset>

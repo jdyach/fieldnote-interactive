@@ -1,0 +1,8 @@
+/node_modules/
+/vendor/
+composer.lock
+/test-results/
+/playwright-report/
+/blob-report/
+fieldnote-interactive.zip
+.DS_Store

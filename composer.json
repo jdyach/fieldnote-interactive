@@ -1,0 +1,25 @@
+{
+	"name": "jdyach/fieldnote-interactive",
+	"description": "Interactive WordPress blocks built with the Interactivity API.",
+	"type": "wordpress-plugin",
+	"license": "GPL-2.0-or-later",
+	"authors": [
+		{ "name": "Jacqui Dyach", "homepage": "https://jacquid.com" }
+	],
+	"require": {
+		"php": ">=7.4"
+	},
+	"require-dev": {
+		"wp-coding-standards/wpcs": "^3.1",
+		"phpcompatibility/phpcompatibility-wp": "^2.1"
+	},
+	"scripts": {
+		"lint": "phpcs",
+		"lint:fix": "phpcbf"
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	}
+}

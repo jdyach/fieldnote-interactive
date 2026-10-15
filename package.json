@@ -1,0 +1,38 @@
+{
+	"name": "fieldnote-interactive",
+	"version": "1.0.0",
+	"description": "Interactive blocks built with the WordPress Interactivity API: a filterable post grid with client-side navigation and a save-for-later reading list.",
+	"author": "Jacqui Dyach",
+	"license": "GPL-2.0-or-later",
+	"private": true,
+	"main": "build/index.js",
+	"files": [
+		"build",
+		"fieldnote-interactive.php",
+		"includes",
+		"readme.txt"
+	],
+	"scripts": {
+		"build": "wp-scripts build --experimental-modules && wp-scripts build-blocks-manifest",
+		"start": "wp-scripts start --experimental-modules",
+		"format": "wp-scripts format",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"blueprint": "node bin/build-blueprint.js",
+		"test:e2e": "playwright test"
+	},
+	"devDependencies": {
+		"@playwright/test": "1.56",
+		"@wordpress/scripts": "^36.1.0"
+	},
+	"dependencies": {
+		"@wordpress/block-editor": "^18.1.0",
+		"@wordpress/blocks": "^16.2.0",
+		"@wordpress/components": "^42.0.0",
+		"@wordpress/i18n": "^6.30.0",
+		"@wordpress/interactivity": "^7.0.0",
+		"@wordpress/interactivity-router": "^2.57.0",
+		"@wordpress/server-side-render": "^6.33.0"
+	}
+}

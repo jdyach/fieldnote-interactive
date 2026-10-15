@@ -1,0 +1,38 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "fieldnote-interactive/save-button",
+  "version": "1.0.0",
+  "title": "Save for Later",
+  "category": "widgets",
+  "icon": "heart",
+  "description": "A bookmark toggle that adds the current post to the visitor's reading list. Works in single templates and inside Query Loops.",
+  "keywords": [
+    "bookmark",
+    "favorite",
+    "reading list",
+    "save"
+  ],
+  "textdomain": "fieldnote-interactive",
+  "usesContext": [
+    "postId",
+    "postType"
+  ],
+  "supports": {
+    "interactivity": true,
+    "html": false,
+    "spacing": {
+      "margin": true
+    },
+    "typography": {
+      "fontSize": true
+    }
+  },
+  "blockHooks": {
+    "core/post-title": "after"
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php",
+  "viewScriptModule": "file:./view.js"
+}

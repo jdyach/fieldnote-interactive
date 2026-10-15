@@ -1,0 +1,25 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fieldnote-interactive/reading-list",
+	"version": "1.0.0",
+	"title": "Reading List",
+	"category": "widgets",
+	"icon": "book-alt",
+	"description": "A header button showing how many posts the visitor has saved, with a panel to revisit or remove them.",
+	"keywords": [ "bookmarks", "favorites", "saved", "reading list" ],
+	"textdomain": "fieldnote-interactive",
+	"supports": {
+		"interactivity": true,
+		"html": false,
+		"multiple": false,
+		"typography": { "fontSize": true }
+	},
+	"blockHooks": {
+		"core/navigation": "after"
+	},
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php",
+	"viewScriptModule": "file:./view.js"
+}
